@@ -74,8 +74,3 @@ Top predictors identified by the tuned model align with the correlation analysis
 - scikit-learn (`RandomizedSearchCV`, preprocessing, metrics)
 - Matplotlib, Seaborn (visualization)
 
-## Limitations
-
-- Label encoding was used for categorical variables for simplicity; this imposes an arbitrary ordinal relationship that doesn't reflect the true nature of categories like login device or payment mode. One-hot encoding could be explored as an alternative.
-- No SMOTE or class-weighting was applied — churn rate (~17%) was judged moderate rather than severe based on baseline model performance on the minority class.
-- Test set performance exceeding validation performance suggests results should be validated on a larger holdout sample before deployment claims.
