@@ -63,10 +63,12 @@ Top predictors identified by the tuned model align with the correlation analysis
 
 ## Business Implications
 
-- **Tenure-based targeting:** Newer customers are highest-risk; onboarding and early-engagement retention offers may reduce churn more than broad, later-stage interventions.
-- **Complaint resolution as a retention lever:** Complaint history is one of the strongest predictors — timely, effective complaint resolution could materially reduce churn.
-- **Model applicability:** With 86% recall on churners at the current threshold, the model can support targeted retention campaigns by flagging at-risk customers before they leave.
+## Business Implications
 
+- **Cashback as the dominant retention lever:** Cashback amount was by far the most important predictive feature, notably ahead of every other variable. Combined with its negative correlation with churn, this suggests cashback/loyalty incentives are the strongest lever available for retention and are worth testing or expanding for at-risk segments.
+- **Tenure and order-hike patterns matter early:** Tenure and OrderAmountHikeFromlastYear ranked second and third in importance — newer customers and customers with unusual order-value changes appear to be higher-risk and may benefit from targeted early-lifecycle engagement.
+- **Recency signals (DaySinceLastOrder) and satisfaction are meaningful but secondary:** These rank in the top five, suggesting re-engagement campaigns for customers who haven't ordered recently could reduce churn.
+- **Note on Complain:** While `Complain` showed a moderate positive correlation with churn (0.25) in isolation, it ranked lowest in the model's feature importance. This suggests its churn signal overlaps with other features (e.g. satisfaction score, tenure) already captured by the model — a useful illustration that correlation and tree-based feature importance can disagree when features are interrelated, rather than a contradiction to be ignored.
 ## Tech Stack
 
 - Python, pandas, NumPy
